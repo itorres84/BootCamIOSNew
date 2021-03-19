@@ -15,22 +15,13 @@
       location = "container:"
       name = "Modulo1">
       <FileRef
+         location = "group:HelleWordPartDos/HelloWord.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Optionales.playground">
       </FileRef>
       <FileRef
          location = "group:TiposDeDatosPlayground.playground">
-      </FileRef>
-      <FileRef
-         location = "group:HelloWord/HelloWord.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:autolayout/autolayout.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:UIComponets/UIComponets.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:HelleWordPartDos/HelloWord.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:scrollViewProgramatly/scrollViewProgramatly.xcodeproj">
