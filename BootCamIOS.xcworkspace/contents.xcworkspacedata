@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Modulo7">
+      <FileRef
+         location = "group:TeamsFootball/TeamsFootball.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TableSimple/TableSimple.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Modulo1">
+      <FileRef
+         location = "group:Optionales.playground">
+      </FileRef>
+      <FileRef
+         location = "group:TiposDeDatosPlayground.playground">
+      </FileRef>
+      <FileRef
+         location = "group:HelloWord/HelloWord.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:autolayout/autolayout.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:UIComponets/UIComponets.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:HelleWordPartDos/HelloWord.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:scrollViewProgramatly/scrollViewProgramatly.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:scrollViewDos/scrollViewDos.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:scrollExample/scrollExample.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Modulo6">
+      <FileRef
+         location = "group:ProgramtlySegues/ProgramtlySegues.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Segues/Segues.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
