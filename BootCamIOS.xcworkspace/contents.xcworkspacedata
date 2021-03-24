@@ -26,9 +26,6 @@
          location = "group:TableSimple/TableSimple.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:TeamsFootball/TeamsFootball.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:HelleWordPartDos/HelloWord.xcodeproj">
       </FileRef>
       <FileRef
@@ -50,5 +47,15 @@
    <Group
       location = "container:"
       name = "Modulo2">
+      <Group
+         location = "container:"
+         name = "NetworkLayer">
+         <FileRef
+            location = "group:WebViewExample/WebViewExample.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:TeamsFootball/TeamsFootball.xcodeproj">
+         </FileRef>
+      </Group>
    </Group>
 </Workspace>
