@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7741DDD02604396200F2EB3A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741DDCF2604396200F2EB3A /* SplashViewController.swift */; };
+		7741DDD4260439A400F2EB3A /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741DDD3260439A400F2EB3A /* SplashViewModel.swift */; };
+		7741DDD926043B1B00F2EB3A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741DDD826043B1B00F2EB3A /* NetworkManager.swift */; };
+		7741DDDD26043BF100F2EB3A /* SplashRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741DDDC26043BF100F2EB3A /* SplashRepository.swift */; };
 		77704F912602E05600B68639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77704F902602E05600B68639 /* AppDelegate.swift */; };
 		77704F932602E05600B68639 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77704F922602E05600B68639 /* SceneDelegate.swift */; };
 		77704F982602E05600B68639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77704F962602E05600B68639 /* Main.storyboard */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7741DDCF2604396200F2EB3A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		7741DDD3260439A400F2EB3A /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		7741DDD826043B1B00F2EB3A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7741DDDC26043BF100F2EB3A /* SplashRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRepository.swift; sourceTree = "<group>"; };
 		77704F8D2602E05600B68639 /* TeamsFootball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamsFootball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77704F902602E05600B68639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77704F922602E05600B68639 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +63,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7741DDCE2604392600F2EB3A /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				7741DDDB26043BD000F2EB3A /* Repository */,
+				7741DDCF2604396200F2EB3A /* SplashViewController.swift */,
+				7741DDD3260439A400F2EB3A /* SplashViewModel.swift */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
+		7741DDD626043A4B00F2EB3A /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				7741DDD826043B1B00F2EB3A /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		7741DDDB26043BD000F2EB3A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7741DDDC26043BF100F2EB3A /* SplashRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		77704F842602E05600B68639 = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +108,8 @@
 		77704F8F2602E05600B68639 /* TeamsFootball */ = {
 			isa = PBXGroup;
 			children = (
-				77704FBC2602E3B700B68639 /* Storage */,
+				7741DDD626043A4B00F2EB3A /* NetworkManager */,
+				77704FBC2602E3B700B68639 /* StorageManager */,
 				77704FBB2602E39B00B68639 /* Entities */,
 				77704FAD2602E1A300B68639 /* scenes */,
 				77704F902602E05600B68639 /* AppDelegate.swift */,
@@ -90,6 +125,7 @@
 		77704FAD2602E1A300B68639 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7741DDCE2604392600F2EB3A /* splash */,
 				77704FAE2602E1AD00B68639 /* ListTeams */,
 			);
 			path = scenes;
@@ -134,12 +170,12 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		77704FBC2602E3B700B68639 /* Storage */ = {
+		77704FBC2602E3B700B68639 /* StorageManager */ = {
 			isa = PBXGroup;
 			children = (
 				77704FC32602EAD700B68639 /* StorageManager.swift */,
 			);
-			path = Storage;
+			path = StorageManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,13 +253,17 @@
 				77704FAB2602E12600B68639 /* Team.swift in Sources */,
 				77704FB52602E25000B68639 /* ListRepository.swift in Sources */,
 				77704FA72602E0C700B68639 /* ListTeamsViewController.swift in Sources */,
+				7741DDD926043B1B00F2EB3A /* NetworkManager.swift in Sources */,
+				7741DDD4260439A400F2EB3A /* SplashViewModel.swift in Sources */,
 				77704F912602E05600B68639 /* AppDelegate.swift in Sources */,
+				7741DDDD26043BF100F2EB3A /* SplashRepository.swift in Sources */,
 				77704FC02602E6D400B68639 /* TeamTableViewCell.swift in Sources */,
 				77704F932602E05600B68639 /* SceneDelegate.swift in Sources */,
 				77704FC92602F44900B68639 /* SmallTeamTableViewCell.swift in Sources */,
 				77704FB22602E22500B68639 /* ListTeamsViewModel.swift in Sources */,
 				77704FC42602EAD700B68639 /* StorageManager.swift in Sources */,
 				77704FB82602E35C00B68639 /* TeamViewData.swift in Sources */,
+				7741DDD02604396200F2EB3A /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
