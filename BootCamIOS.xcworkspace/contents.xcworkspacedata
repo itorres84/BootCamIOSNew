@@ -3,21 +3,19 @@
    version = "1.0">
    <Group
       location = "container:"
-      name = "Modulo7">
+      name = "Modulo1">
       <FileRef
-         location = "group:TeamsFootball/TeamsFootball.xcodeproj">
+         location = "group:Segues/Segues.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:ProgramtlySegues/ProgramtlySegues.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:TableSimple/TableSimple.xcodeproj">
       </FileRef>
-   </Group>
-   <Group
-      location = "container:"
-      name = "Modulo1">
-      <Group
-         location = "container:"
-         name = "Tema8">
-      </Group>
+      <FileRef
+         location = "group:TeamsFootball/TeamsFootball.xcodeproj">
+      </FileRef>
       <FileRef
          location = "group:HelleWordPartDos/HelloWord.xcodeproj">
       </FileRef>
@@ -39,12 +37,6 @@
    </Group>
    <Group
       location = "container:"
-      name = "Modulo6">
-      <FileRef
-         location = "group:ProgramtlySegues/ProgramtlySegues.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Segues/Segues.xcodeproj">
-      </FileRef>
+      name = "Modulo2">
    </Group>
 </Workspace>
