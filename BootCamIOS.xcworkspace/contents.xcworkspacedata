@@ -5,6 +5,9 @@
       location = "container:"
       name = "Modulo1">
       <FileRef
+         location = "group:autolayout/autolayout.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:UIComponets/UIComponets.xcodeproj">
       </FileRef>
       <FileRef
