@@ -51,6 +51,9 @@
          location = "container:"
          name = "NetworkLayer">
          <FileRef
+            location = "group:WKWebviewExample/WKWebviewExample.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:WebViewExample/WebViewExample.xcodeproj">
          </FileRef>
          <FileRef
