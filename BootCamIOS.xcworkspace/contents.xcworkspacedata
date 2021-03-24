@@ -5,6 +5,12 @@
       location = "container:"
       name = "Modulo1">
       <FileRef
+         location = "group:Login/Login.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:modulo3/TiposDeDatosPlayground.playground">
+      </FileRef>
+      <FileRef
          location = "group:autolayout/autolayout.xcodeproj">
       </FileRef>
       <FileRef
