@@ -3,6 +3,498 @@
    version = "1.0">
    <Group
       location = "container:"
+      name = "Modulo2">
+      <Group
+         location = "group:Modulo2/Alamofire"
+         name = "Alamofire">
+         <FileRef
+            location = "group:Networking/Networking.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Modulo2/NetworkLayer"
+         name = "NetworkLayer">
+         <Group
+            location = "group:WKWebviewExample"
+            name = "WKWebviewExample">
+            <Group
+               location = "group:WKWebviewExample"
+               name = "WKWebviewExample">
+               <FileRef
+                  location = "group:ViewController.swift">
+               </FileRef>
+               <Group
+                  location = "group:Assets.xcassets"
+                  name = "Assets.xcassets">
+                  <Group
+                     location = "group:AppIcon.appiconset"
+                     name = "AppIcon.appiconset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:AccentColor.colorset"
+                     name = "AccentColor.colorset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Base.lproj"
+                  name = "Base.lproj">
+                  <FileRef
+                     location = "group:LaunchScreen.storyboard">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Main.storyboard">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:AppDelegate.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Info.plist">
+               </FileRef>
+               <FileRef
+                  location = "group:SceneDelegate.swift">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:WKWebviewExample.xcodeproj">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:WebViewExample"
+            name = "WebViewExample">
+            <FileRef
+               location = "group:WebViewExample.xcodeproj">
+            </FileRef>
+            <Group
+               location = "group:WebViewExample"
+               name = "WebViewExample">
+               <FileRef
+                  location = "group:ViewController.swift">
+               </FileRef>
+               <Group
+                  location = "group:Assets.xcassets"
+                  name = "Assets.xcassets">
+                  <Group
+                     location = "group:AppIcon.appiconset"
+                     name = "AppIcon.appiconset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:AccentColor.colorset"
+                     name = "AccentColor.colorset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Base.lproj"
+                  name = "Base.lproj">
+                  <FileRef
+                     location = "group:LaunchScreen.storyboard">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Main.storyboard">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:AppDelegate.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Info.plist">
+               </FileRef>
+               <FileRef
+                  location = "group:SceneDelegate.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:TeamsFootball"
+            name = "TeamsFootball">
+            <FileRef
+               location = "group:TeamsFootball.xcodeproj">
+            </FileRef>
+            <Group
+               location = "group:TeamsFootball"
+               name = "TeamsFootball">
+               <Group
+                  location = "group:StorageManager"
+                  name = "StorageManager">
+                  <FileRef
+                     location = "group:StorageManager.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:scenes"
+                  name = "scenes">
+                  <Group
+                     location = "group:splash"
+                     name = "splash">
+                     <Group
+                        location = "group:Repository"
+                        name = "Repository">
+                        <FileRef
+                           location = "group:SplashRepository.swift">
+                        </FileRef>
+                     </Group>
+                     <FileRef
+                        location = "group:SplashViewController.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:SplashViewModel.swift">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:ListTeams"
+                     name = "ListTeams">
+                     <Group
+                        location = "group:Repository"
+                        name = "Repository">
+                        <FileRef
+                           location = "group:ListRepository.swift">
+                        </FileRef>
+                     </Group>
+                     <Group
+                        location = "group:presentation"
+                        name = "presentation">
+                        <FileRef
+                           location = "group:ListTeamsViewController.swift">
+                        </FileRef>
+                        <FileRef
+                           location = "group:SmallTeamTableViewCell.xib">
+                        </FileRef>
+                        <FileRef
+                           location = "group:TeamTableViewCell.xib">
+                        </FileRef>
+                        <FileRef
+                           location = "group:ListTeamsViewModel.swift">
+                        </FileRef>
+                        <FileRef
+                           location = "group:TeamViewData.swift">
+                        </FileRef>
+                        <FileRef
+                           location = "group:TeamTableViewCell.swift">
+                        </FileRef>
+                        <FileRef
+                           location = "group:SmallTeamTableViewCell.swift">
+                        </FileRef>
+                     </Group>
+                  </Group>
+               </Group>
+               <Group
+                  location = "group:NetworkManager"
+                  name = "NetworkManager">
+                  <FileRef
+                     location = "group:NetworkManager.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Assets.xcassets"
+                  name = "Assets.xcassets">
+                  <Group
+                     location = "group:Atletico de Madrid.imageset"
+                     name = "Atletico de Madrid.imageset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Atletico de Madrid.jpg">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Barcelona.imageset"
+                     name = "Barcelona.imageset">
+                     <FileRef
+                        location = "group:Barcelona.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Malaga.imageset"
+                     name = "Malaga.imageset">
+                     <FileRef
+                        location = "group:Malaga.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Espanyol.imageset"
+                     name = "Espanyol.imageset">
+                     <FileRef
+                        location = "group:Espanyol.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Real Sociedad.imageset"
+                     name = "Real Sociedad.imageset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Real Sociedad.jpg">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Deportivo de la coruña.imageset"
+                     name = "Deportivo de la coruña.imageset">
+                     <FileRef
+                        location = "group:../Deportivo de la coruña.imageset/Deportivo de la Coruña.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:../Deportivo de la coruña.imageset/Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Valladolid.imageset"
+                     name = "Valladolid.imageset">
+                     <FileRef
+                        location = "group:Valladolid.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Sporting.imageset"
+                     name = "Sporting.imageset">
+                     <FileRef
+                        location = "group:Sporting.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:AppIcon.appiconset"
+                     name = "AppIcon.appiconset">
+                     <FileRef
+                        location = "group:iphone-notification-20pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ipad-app-76pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:apple-watch-companion-29pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:apple-watch-companion-29pt@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:iphone-notification-20pt@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:apple-watch-home-50pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:carplay-60pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ipad-notification-20pt@1x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ipad-pro-app-83.5pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:apple-watch-home-40pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:carplay-60pt@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ipad-spotlight-40pt@1x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:apple-watch-shortlook-86pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ipad-settings-29pt@1x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:iphone-settings-29pt@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:apple-watch-notification-24pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ipad-spotlight-40pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ipad-settings-29pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:app-store-1024pt@1x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:apple-watch-shortlook-108pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:apple-watch-home-44pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ipad-notification-20pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:iphone-settings-29pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:iphone-app-60pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:apple-watch-notification-27.5pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:iphone-spotlight-40pt@3x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:iphone-spotlight-40pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ipad-app-76pt@1x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:apple-watch-shortlook-98pt@2x.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:iphone-app-60pt@3x.png">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:AccentColor.colorset"
+                     name = "AccentColor.colorset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Albacete.imageset"
+                     name = "Albacete.imageset">
+                     <FileRef
+                        location = "group:Albacete.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Eibar.imageset"
+                     name = "Eibar.imageset">
+                     <FileRef
+                        location = "group:Eibar.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Las Palmas.imageset"
+                     name = "Las Palmas.imageset">
+                     <FileRef
+                        location = "group:Las Palmas.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Mallorca.imageset"
+                     name = "Mallorca.imageset">
+                     <FileRef
+                        location = "group:Mallorca.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+                  <Group
+                     location = "group:la_liga_logo.imageset"
+                     name = "la_liga_logo.imageset">
+                     <FileRef
+                        location = "group:la_liga_logo.png">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Rayo Vallecano.imageset"
+                     name = "Rayo Vallecano.imageset">
+                     <FileRef
+                        location = "group:Rayo Vallecano.jpg">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Ponferradina.imageset"
+                     name = "Ponferradina.imageset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Ponferradina.jpg">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <Group
+                  location = "group:Base.lproj"
+                  name = "Base.lproj">
+                  <FileRef
+                     location = "group:LaunchScreen.storyboard">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Main.storyboard">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:AppDelegate.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Info.plist">
+               </FileRef>
+               <Group
+                  location = "group:Entities"
+                  name = "Entities">
+                  <FileRef
+                     location = "group:Team.swift">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:SceneDelegate.swift">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+   </Group>
+   <Group
+      location = "container:"
       name = "Modulo1">
       <FileRef
          location = "group:Login/Login.xcodeproj">
@@ -44,21 +536,7 @@
          location = "group:scrollExample/scrollExample.xcodeproj">
       </FileRef>
    </Group>
-   <Group
-      location = "container:"
-      name = "Modulo2">
-      <Group
-         location = "container:"
-         name = "NetworkLayer">
-         <FileRef
-            location = "group:WKWebviewExample/WKWebviewExample.xcodeproj">
-         </FileRef>
-         <FileRef
-            location = "group:WebViewExample/WebViewExample.xcodeproj">
-         </FileRef>
-         <FileRef
-            location = "group:TeamsFootball/TeamsFootball.xcodeproj">
-         </FileRef>
-      </Group>
-   </Group>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
