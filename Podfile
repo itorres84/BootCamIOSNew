@@ -13,3 +13,20 @@ target 'Networking' do
 
 
 end
+
+target 'CoreNetwork' do
+  
+  project 'Modulo2/Core/CoreNetwork/CoreNetwork'
+  
+  pod 'Alamofire', '~> 5.2'
+
+
+end
+
+target 'laliga' do
+  
+  project 'Modulo2/LaLiga/laliga/laliga'
+  
+  pod 'Alamofire', '~> 5.2'
+
+end

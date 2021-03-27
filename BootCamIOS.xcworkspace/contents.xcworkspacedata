@@ -5,6 +5,20 @@
       location = "container:"
       name = "Modulo2">
       <Group
+         location = "group:Modulo2/LaLiga"
+         name = "LaLiga">
+         <FileRef
+            location = "group:laliga/laliga.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Modulo2/Core"
+         name = "Core">
+         <FileRef
+            location = "group:CoreNetwork/CoreNetwork.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:Modulo2/Alamofire"
          name = "Alamofire">
          <FileRef
@@ -256,13 +270,13 @@
                      </FileRef>
                   </Group>
                   <Group
-                     location = "group:Deportivo de la coruña.imageset"
-                     name = "Deportivo de la coruña.imageset">
+                     location = "group:Deportivo de la coru&#xf1;a.imageset"
+                     name = "Deportivo de la coru&#xf1;a.imageset">
                      <FileRef
-                        location = "group:../Deportivo de la coruña.imageset/Deportivo de la Coruña.jpg">
+                        location = "group:../Deportivo de la coru&#xf1;a.imageset/Deportivo de la Coru&#xf1;a.jpg">
                      </FileRef>
                      <FileRef
-                        location = "group:../Deportivo de la coruña.imageset/Contents.json">
+                        location = "group:../Deportivo de la coru&#xf1;a.imageset/Contents.json">
                      </FileRef>
                   </Group>
                   <Group
