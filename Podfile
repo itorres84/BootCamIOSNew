@@ -30,3 +30,12 @@ target 'laliga' do
   pod 'Alamofire', '~> 5.2'
 
 end
+
+target 'ParseXML' do
+  
+  project 'Modulo2/ParseXML/ParseXML/ParseXML'
+  
+  pod 'Alamofire', '~> 5.2'
+
+end
+
