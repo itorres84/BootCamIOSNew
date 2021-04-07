@@ -5,6 +5,13 @@
       location = "container:"
       name = "Modulo2">
       <Group
+         location = "group:Modulo2/LocationExample"
+         name = "LocationExample">
+         <FileRef
+            location = "group:LocationExample/LocationExample.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:Modulo2/ParseXML"
          name = "ParseXML">
          <FileRef
