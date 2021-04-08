@@ -17,64 +17,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EIN-lf-O7C">
-                                <rect key="frame" x="0.0" y="186" width="414" height="710"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ETj-u8-1nB">
-                                <rect key="frame" x="20" y="123" width="295" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="ux8-UB-ehF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmS-La-nGn">
-                                <rect key="frame" x="324" y="123" width="70" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="FtO-sr-U14"/>
-                                    <constraint firstAttribute="height" constant="35" id="mTz-fx-IzY"/>
-                                </constraints>
-                                <state key="normal" title="Search"/>
-                                <connections>
-                                    <action selector="searchAddress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LVI-VB-fSK"/>
-                                </connections>
-                            </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90K-Vc-Kcp">
-                                <rect key="frame" x="20" y="166" width="374" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="6ER-vy-nxk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ETj-u8-1nB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Zl-V3-CjJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="90K-Vc-Kcp" secondAttribute="trailing" constant="20" id="B1V-NF-EY7"/>
-                            <constraint firstItem="cmS-La-nGn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="CYv-Kl-VdQ"/>
-                            <constraint firstItem="ETj-u8-1nB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="JOb-mb-GWO"/>
-                            <constraint firstItem="90K-Vc-Kcp" firstAttribute="top" secondItem="ETj-u8-1nB" secondAttribute="bottom" constant="8" symbolic="YES" id="W3x-wg-384"/>
+                            <constraint firstItem="EIN-lf-O7C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HRQ-se-0VG"/>
                             <constraint firstItem="EIN-lf-O7C" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="W50-WB-TFu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cmS-La-nGn" secondAttribute="trailing" constant="20" id="ZZa-Zh-5tu"/>
-                            <constraint firstItem="90K-Vc-Kcp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aw4-5T-Qko"/>
                             <constraint firstItem="EIN-lf-O7C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mze-hE-QE8"/>
-                            <constraint firstItem="cmS-La-nGn" firstAttribute="leading" secondItem="ETj-u8-1nB" secondAttribute="trailing" constant="9" id="s7f-sH-jAc"/>
                             <constraint firstItem="EIN-lf-O7C" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uap-WD-yY5"/>
-                            <constraint firstItem="EIN-lf-O7C" firstAttribute="top" secondItem="90K-Vc-Kcp" secondAttribute="bottom" constant="20" id="wtN-zs-oca"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Find Address" id="spH-lr-teq"/>
                     <connections>
-                        <outlet property="lblAddress" destination="90K-Vc-Kcp" id="bsd-3M-u2V"/>
                         <outlet property="mapView" destination="EIN-lf-O7C" id="mmJ-JP-EAr"/>
-                        <outlet property="txtAddress" destination="ETj-u8-1nB" id="Itc-WK-fuH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960.86956521739137" y="36.830357142857139"/>
+        </scene>
+        <!--Location Search Table-->
+        <scene sceneID="DOc-GZ-v4A">
+            <objects>
+                <tableViewController storyboardIdentifier="LocationSearchTable" id="EDd-Go-ly9" customClass="LocationSearchTable" customModule="LocationExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1eW-Aw-IZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eOE-mR-u8F">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eOE-mR-u8F" id="DZI-4t-mk2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EDd-Go-ly9" id="FDa-Ru-6CB"/>
+                            <outlet property="delegate" destination="EDd-Go-ly9" id="oyw-zO-yxX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55j-r4-rH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797" y="37"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KdU-HT-tLg">
