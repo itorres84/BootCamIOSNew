@@ -12,13 +12,15 @@ import Speech
 
 class ViewController: UIViewController, LocationSearchTableShowResult {
     
-    private let rangeInMeters: Double = 5000
+    private let rangeInMeters: Double = 1000
         
     var resultSearchController: UISearchController? = nil
     
     var selectedPin:MKPlacemark? = nil
     var route: MKRoute?
     var stepCounter: Int = 0
+    
+    var inRoute: Bool = false
     
     let synthesizer = AVSpeechSynthesizer()
     
@@ -64,8 +66,6 @@ class ViewController: UIViewController, LocationSearchTableShowResult {
         resultSearchController?.hidesNavigationBarDuringPresentation = true
         resultSearchController?.obscuresBackgroundDuringPresentation = true
         definesPresentationContext = true
-        
-        
         
     }
     
@@ -243,9 +243,10 @@ class ViewController: UIViewController, LocationSearchTableShowResult {
         let routeRequest = MKDirections.Request()
         routeRequest.source = sourceItem
         routeRequest.destination = destinationItem
-        routeRequest.transportType = .automobile
+        routeRequest.transportType = .walking
         
         let directions = MKDirections(request: routeRequest)
+        
         directions.calculate { (response, err) in
             
             if let error = err {
@@ -280,12 +281,17 @@ class ViewController: UIViewController, LocationSearchTableShowResult {
         })
         
         stepCounter += 1
+        
         let initialMessange = "En \(stepsDos[stepCounter].distance) metros  \(stepsDos[stepCounter].instructions), luego en \(stepsDos[stepCounter + 1].distance) metros, \(stepsDos[stepCounter + 2].instructions)"
         
         let spetch = AVSpeechUtterance(string: initialMessange)
         spetch.voice = AVSpeechSynthesisVoice(language: "es-MX")
         synthesizer.speak(spetch)
-        //startNavigation()
+        startNavigation()
+    }
+    
+    fileprivate func startNavigation() {
+        centerViewOnUser()
     }
 
 }
@@ -299,7 +305,7 @@ extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        guard let location = locations.last else { return }
+        guard let location = locations.last, !inRoute else { return }
         
         centerViewOnUser(location)
     
@@ -309,10 +315,7 @@ extension ViewController: CLLocationManagerDelegate {
 
 extension ViewController: MKMapViewDelegate {
     // 1
-    func mapView(
-      _ mapView: MKMapView,
-      viewFor annotation: MKAnnotation
-    ) -> MKAnnotationView? {
+    func mapView( _ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
       // 2
       guard let annotation = annotation as? MKPointAnnotation else {
         return nil
@@ -321,42 +324,38 @@ extension ViewController: MKMapViewDelegate {
       let identifier = "pin"
       var view: MKMarkerAnnotationView
       // 4
-      if let dequeuedView = mapView.dequeueReusableAnnotationView(
-        withIdentifier: identifier) as? MKMarkerAnnotationView {
+      if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
+        
         dequeuedView.annotation = annotation
         view = dequeuedView
+      
       } else {
         // 5
-        view = MKMarkerAnnotationView(
-          annotation: annotation,
-          reuseIdentifier: identifier)
+        view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
         view.canShowCallout = true
         view.calloutOffset = CGPoint(x: -5, y: 5)
-        view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        view.rightCalloutAccessoryView = UIButton(type: .close)
       }
       return view
     }
     
-    func mapView(
-      _ mapView: MKMapView,
-      annotationView view: MKAnnotationView,
-      calloutAccessoryControlTapped control: UIControl
-    ) {
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
       guard let anotation = view.annotation as? MKPointAnnotation else {
         return
       }
-        
+    
+      inRoute = true
       mapToRoute(destionationCoordinate: anotation.coordinate)
       
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        
+
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = .systemBlue
+        renderer.strokeColor = .red
         return renderer
-        
+
     }
     
 }
