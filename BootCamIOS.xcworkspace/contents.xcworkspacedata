@@ -12,10 +12,10 @@
          location = "group:../../BootCam/BootCamIOSNew/Modulo2/Closures"
          name = "Closures">
          <FileRef
-            location = "group:ClousuresExample/ClousuresExample.xcodeproj">
+            location = "group:Closures.playground">
          </FileRef>
          <FileRef
-            location = "group:Closures.playground">
+            location = "group:ClousuresExample/ClousuresExample.xcodeproj">
          </FileRef>
       </Group>
       <Group
