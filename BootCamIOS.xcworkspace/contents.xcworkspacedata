@@ -5,6 +5,20 @@
       location = "container:"
       name = "Modulo2">
       <Group
+         location = "container:"
+         name = "SocialNetworks">
+      </Group>
+      <Group
+         location = "group:../../BootCam/BootCamIOSNew/Modulo2/Closures"
+         name = "Closures">
+         <FileRef
+            location = "group:ClousuresExample/ClousuresExample.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Closures.playground">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:../../BootCam/BootCamIOSNew/Modulo2/Protocols"
          name = "Protocols">
          <FileRef

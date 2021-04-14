@@ -127,6 +127,7 @@ class LocationSearchTable: UITableViewController, UISearchResultsUpdating {
         dismiss(animated: true) {
             self.delegate?.showResult(placemark: placemark)
         }
+    
     }
 
     // MARK: - UISearchResultsUpdating
