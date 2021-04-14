@@ -5,25 +5,143 @@
       location = "container:"
       name = "Modulo2">
       <Group
-         location = "container:"
-         name = "SocialNetworks">
+         location = "group:Modulo2/Protocols"
+         name = "Protocols">
+         <Group
+            location = "group:ProtocolsExample"
+            name = "ProtocolsExample">
+            <Group
+               location = "group:ProtocolsExample"
+               name = "ProtocolsExample">
+               <FileRef
+                  location = "group:ViewController.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:HasArea.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:SomeProtocol.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:HerenciaProtocol.swift">
+               </FileRef>
+               <Group
+                  location = "group:Assets.xcassets"
+                  name = "Assets.xcassets">
+                  <Group
+                     location = "group:AppIcon.appiconset"
+                     name = "AppIcon.appiconset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:AccentColor.colorset"
+                     name = "AccentColor.colorset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Base.lproj"
+                  name = "Base.lproj">
+                  <FileRef
+                     location = "group:LaunchScreen.storyboard">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Main.storyboard">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:AppDelegate.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Info.plist">
+               </FileRef>
+               <FileRef
+                  location = "group:SceneDelegate.swift">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:ProtocolsExample.xcodeproj">
+            </FileRef>
+         </Group>
       </Group>
       <Group
-         location = "group:../../BootCam/BootCamIOSNew/Modulo2/Closures"
+         location = "group:Modulo2/Closures"
          name = "Closures">
          <FileRef
             location = "group:Closures.playground">
          </FileRef>
-         <FileRef
-            location = "group:ClousuresExample/ClousuresExample.xcodeproj">
-         </FileRef>
+         <Group
+            location = "group:ClousuresExample"
+            name = "ClousuresExample">
+            <FileRef
+               location = "group:ClousuresExample.xcodeproj">
+            </FileRef>
+            <Group
+               location = "group:ClousuresExample"
+               name = "ClousuresExample">
+               <FileRef
+                  location = "group:ViewController.swift">
+               </FileRef>
+               <Group
+                  location = "group:Assets.xcassets"
+                  name = "Assets.xcassets">
+                  <Group
+                     location = "group:AppIcon.appiconset"
+                     name = "AppIcon.appiconset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:AccentColor.colorset"
+                     name = "AccentColor.colorset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Base.lproj"
+                  name = "Base.lproj">
+                  <FileRef
+                     location = "group:LaunchScreen.storyboard">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Main.storyboard">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:AppDelegate.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Info.plist">
+               </FileRef>
+               <FileRef
+                  location = "group:SceneDelegate.swift">
+               </FileRef>
+            </Group>
+         </Group>
       </Group>
       <Group
-         location = "group:../../BootCam/BootCamIOSNew/Modulo2/Protocols"
-         name = "Protocols">
-         <FileRef
-            location = "group:ProtocolsExample/ProtocolsExample.xcodeproj">
-         </FileRef>
+         location = "group:Modulo2/SocialNetworks"
+         name = "SocialNetworks">
+         <Group
+            location = "group:LoginFacebook"
+            name = "LoginFacebook">
+            <FileRef
+               location = "group:LoginFacebook/LoginFacebook.xcodeproj">
+            </FileRef>
+         </Group>
       </Group>
       <Group
          location = "group:Modulo2/LocationExample"

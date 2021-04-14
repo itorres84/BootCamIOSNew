@@ -39,3 +39,11 @@ target 'ParseXML' do
 
 end
 
+target 'LoginFacebook' do
+  
+  project 'Modulo2/SocialNetworks/LoginFacebook/LoginFacebook/LoginFacebook'
+  
+  pod 'FBSDKLoginKit'
+  
+end
+
