@@ -44,6 +44,7 @@ target 'LoginFacebook' do
   project 'Modulo2/SocialNetworks/LoginFacebook/LoginFacebook/LoginFacebook'
   
   pod 'FBSDKLoginKit'
+  pod 'Alamofire', '~> 5.2'
   
 end
 

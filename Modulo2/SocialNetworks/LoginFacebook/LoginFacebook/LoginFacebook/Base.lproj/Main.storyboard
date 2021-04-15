@@ -80,18 +80,60 @@
         <!--Home-->
         <scene sceneID="5Qh-sA-jGr">
             <objects>
-                <viewController id="2Av-J7-A9u" sceneMemberID="viewController">
+                <viewController id="2Av-J7-A9u" customClass="HomeViewController" customModule="LoginFacebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cGB-xo-8HB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ny9-Qp-A2T">
+                                <rect key="frame" x="182" y="82" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="B0D-vz-NA8"/>
+                                    <constraint firstAttribute="width" constant="50" id="yHc-Px-Lge"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kS-zm-TJP">
+                                <rect key="frame" x="20" y="157" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yLv-Ev-S4K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TO2-9Z-sr5">
+                                <rect key="frame" x="20" y="217" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eee-8O-Psu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Uj-PI-Dhm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ny9-Qp-A2T" firstAttribute="top" secondItem="6Uj-PI-Dhm" secondAttribute="top" constant="38" id="23O-wx-OkA"/>
+                            <constraint firstItem="0kS-zm-TJP" firstAttribute="leading" secondItem="6Uj-PI-Dhm" secondAttribute="leading" constant="20" id="9F3-hu-YiU"/>
+                            <constraint firstItem="TO2-9Z-sr5" firstAttribute="top" secondItem="0kS-zm-TJP" secondAttribute="bottom" constant="30" id="PS1-TJ-VAt"/>
+                            <constraint firstItem="6Uj-PI-Dhm" firstAttribute="trailing" secondItem="TO2-9Z-sr5" secondAttribute="trailing" constant="20" id="RLg-jy-CDO"/>
+                            <constraint firstItem="6Uj-PI-Dhm" firstAttribute="trailing" secondItem="0kS-zm-TJP" secondAttribute="trailing" constant="20" id="h4g-Vh-XuH"/>
+                            <constraint firstItem="ny9-Qp-A2T" firstAttribute="centerX" secondItem="cGB-xo-8HB" secondAttribute="centerX" id="leK-Rd-37a"/>
+                            <constraint firstItem="TO2-9Z-sr5" firstAttribute="leading" secondItem="6Uj-PI-Dhm" secondAttribute="leading" constant="20" id="lyv-7H-tVo"/>
+                            <constraint firstItem="0kS-zm-TJP" firstAttribute="top" secondItem="ny9-Qp-A2T" secondAttribute="bottom" constant="25" id="yjj-rd-Udr"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="lEt-DY-nZd"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="lEt-DY-nZd"/>
+                    <connections>
+                        <outlet property="email" destination="TO2-9Z-sr5" id="zhf-1d-gvJ"/>
+                        <outlet property="name" destination="0kS-zm-TJP" id="smR-8q-YJA"/>
+                        <outlet property="pictureProfile" destination="ny9-Qp-A2T" id="tlg-sN-OrE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPx-5B-F4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2909" y="44"/>
+            <point key="canvasLocation" x="2908.6956521739135" y="43.526785714285715"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IfZ-wX-lNd">
@@ -117,6 +159,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fuv-dG-plt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Pc-53-wZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -130,6 +173,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="loginFacebook" width="840" height="592"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
