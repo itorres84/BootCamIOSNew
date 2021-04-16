@@ -196,6 +196,9 @@
       <Group
          location = "group:Modulo2/SocialNetworks"
          name = "SocialNetworks">
+         <FileRef
+            location = "group:SocialKit/SocialKit.xcodeproj">
+         </FileRef>
          <Group
             location = "group:LoginFacebook"
             name = "LoginFacebook">

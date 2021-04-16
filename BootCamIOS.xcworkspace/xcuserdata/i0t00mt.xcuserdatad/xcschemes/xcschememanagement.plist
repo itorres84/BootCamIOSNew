@@ -30,7 +30,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>32</integer>
 		</dict>
 		<key>Optionales (Playground) 1.xcscheme</key>
 		<dict>
@@ -72,14 +72,14 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>31</integer>
 		</dict>
 		<key>TiposDeDatosPlayground (Playground) 1.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>33</integer>
 		</dict>
 		<key>TiposDeDatosPlayground (Playground) 2.xcscheme</key>
 		<dict>
@@ -100,7 +100,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>30</integer>
 		</dict>
 	</dict>
 </dict>
