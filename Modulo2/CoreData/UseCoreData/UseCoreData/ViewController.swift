@@ -79,8 +79,12 @@ class ViewController: UIViewController {
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
         
-        alert.addTextField()
-        alert.addTextField()
+        alert.addTextField { (txtName) in
+            txtName.placeholder = "Escribe tu nombre"
+        }
+        alert.addTextField { (txtTelephone) in
+            txtTelephone.placeholder = "Escribe tu telefono"
+        }
         
         present(alert, animated: true)
         
@@ -104,7 +108,7 @@ class ViewController: UIViewController {
         //KVO - Key Value Object
         //3
         person.setValue(name, forKey: "name")
-        if let telephone = Float(number) {
+        if let telephone = Int(number) {
             person.setValue(telephone, forKey: "telephone")
         }
     
@@ -121,6 +125,66 @@ class ViewController: UIViewController {
     
     }
     
+    var deletePerson: Person?
+    var deleteIndexPath: IndexPath?
+    
+    func confirmDelete(indexPath: IndexPath) {
+        
+        let person = peoples[indexPath.row]
+        
+        guard let name = person.name else {
+            return
+        }
+        
+        deletePerson = person
+        deleteIndexPath = indexPath
+        
+        let alert = UIAlertController(title: "Delete person",
+                                      message: "Are you sure you want to permenently delete \(name) ?",
+                                      preferredStyle: .alert)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDeletePerson)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: handleCancelPerson)
+        
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func handleCancelPerson(accion: UIAlertAction) {
+        deletePerson = nil
+        deleteIndexPath = nil
+    }
+    
+    func handleDeletePerson(accion: UIAlertAction) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+              let person = deletePerson,
+              let deleteIndex = deleteIndexPath else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        do {
+                        
+            managedContext.delete(person)
+            try managedContext.save()
+            
+            peoples.remove(at: deleteIndex.row)
+            self.tableView.reloadData()
+            deleteIndexPath = nil
+            deletePerson = nil
+            
+        } catch {
+            debugPrint(error.localizedDescription)
+        }
+    
+    }
+
 }
 
 extension ViewController: UITableViewDataSource {
@@ -133,12 +197,13 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
         let person = peoples[indexPath.row]
-        let name = person.value(forKey: "name") as? String
-        let telephone = person.value(forKey: "telephone") as? Float
+        let name = person.name ?? ""
+        let telephone = person.telephone
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "name: \(name ?? ""), telephone: \(Int(telephone ?? 0))"
-            
+        cell.textLabel?.text = "Name: \(name)\nTelephone: \(telephone)"
+        cell.textLabel?.numberOfLines = 0
+        
         return cell
     }
     
@@ -149,9 +214,75 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let person = peoples[indexPath.row]
-        let name = person.value(forKey: "name") as? String
-        let telephone = person.value(forKey: "telephone") as? Float
-         
+        let name = person.name
+        let telephone = person.telephone
+        
+        var txtNameAfter: UITextField?
+        var txtTelephoneAfter: UITextField?
+        
+        let alert = UIAlertController(title: "Update Person",
+                                      message: "update a peron whit name: \(name ?? "")",
+                                      preferredStyle: .alert)
+        
+        let updateAction = UIAlertAction(title: "Update",
+                                       style: .default) { (accion) in
+            
+           
+            guard let txtName = txtNameAfter,
+                  let txtTelephone = txtTelephoneAfter else {  return }
+            
+            person.name = txtName.text
+        
+            if let telephone = Int(txtTelephone.text ?? "") {
+                person.telephone = Int64(telephone)
+            }
+            
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+            
+            //1
+            let managedContext = appDelegate.persistentContainer.viewContext
+            
+            do {
+                
+                try managedContext.save()
+                self.tableView.reloadData()
+                
+            } catch {
+                
+                print(error.localizedDescription)
+            
+            }
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(updateAction)
+        alert.addAction(cancelAction)
+        
+        alert.addTextField { (txtName) in
+            txtName.text = name
+            txtNameAfter = txtName
+        }
+        alert.addTextField { (txtTelephone) in
+            txtTelephone.keyboardType = .numberPad
+            txtTelephone.text = "\(telephone)"
+            txtTelephoneAfter = txtTelephone
+        }
+        
+        present(alert, animated: true)
+        
+
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            confirmDelete(indexPath: indexPath)
+        }
         
     }
     
